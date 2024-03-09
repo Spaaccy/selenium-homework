@@ -9,6 +9,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 import java.util.Objects;
 import static ge.tbcitacademy.data.Constants.AUTOMATION_URL;
 
@@ -27,7 +29,7 @@ public class NavigationTest {
     }
     @Test
     public void goToSuccessStoriesAndBack() {
-        WebDriverWait wait = new WebDriverWait(driver, 7);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
         WebElement successStoryLink = driver.findElement(By.xpath("//*[@id=\"menu-item-218098\"]/a"));
         successStoryLink.click();
         wait.until(ExpectedConditions.urlToBe("https://ultimateqa.com/testimonials/"));
