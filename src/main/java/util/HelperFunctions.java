@@ -20,8 +20,5 @@ public class HelperFunctions {
         } else {
             throw new IllegalArgumentException(UNSUPPORTED_ELEMENT_TYPE_MESSAGE);
         }
-        System.out.println("I AM A FIX");
-        System.out.println("I AM A CHANGE MEANWHILE");
-        System.out.println("NO CONFLICT PLS LETS BE FRIENDS :)");
     }
 }
