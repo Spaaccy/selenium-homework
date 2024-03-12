@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.util.Objects;
 import static ge.tbcitacademy.data.Constants.DRAG_AND_DROP_URL;
-import static ge.tbcitacademy.util.HelperFunctions.hasAttributeWithValue;
+import static util.HelperFunctions.hasAttributeWithValue;
 
 public class WebElementTest {
     WebDriver driver;

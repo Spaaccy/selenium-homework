@@ -9,10 +9,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.time.Duration;
 import java.util.Objects;
-import static ge.tbcitacademy.data.Constants.DYNAMIC_CONTROLS_URL;
+import static ge.tbcitacademy.data.Constants.*;
 
 public class CommandsTest {
     WebDriver driver;
@@ -29,7 +28,7 @@ public class CommandsTest {
     }
     @Test
     public void buttonsTest()  {
-       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT_SECONDS_SHORT));
        WebElement button = driver.findElement(By.xpath("//*[@id=\"input-example\"]/button"));
        WebElement inputField = driver.findElement(By.xpath("//*[@id=\"input-example\"]/input"));
        button.click();
