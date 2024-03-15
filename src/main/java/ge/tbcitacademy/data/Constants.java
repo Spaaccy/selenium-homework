@@ -14,6 +14,13 @@ public class Constants {
     public static final String CUSTOM_DROP_DOWN_TEST_URL = "https://tympanus.net/Tutorials/CustomDropDownListStyling/";
     public static final String CANVAS_REGISTER_URL = "https://techcanvass.com/examples/register.html";
     public static final String PROGRESS_BAR_URL = "https://demoqa.com/progress-bar";
+    public static final String I_FRAMES_URL = "http://the-internet.herokuapp.com/iframe";
+    public static final String DEMO_QA_ALERTS_URL = "https://demoqa.com/alerts";
+    public static final String TECHLISTIC_TABLE_URL = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html";
+    public static final String TECH_CANVAS_TABLE_URL = "https://techcanvass.com/Examples/webtable.html";
+    public static final String HARD_DOM_TABLE_URL = "http://the-internet.herokuapp.com/challenging_dom#delete";
+    public static final String DEPRESSION_IS_REAL_TABLE_URL = "https://www.healthline.com/health/depression/facts-statistics-infographic#how-common-is-it";
+    public static final String WIKIPEDIA_TABLE_URL = "https://en.wikipedia.org/wiki/Help:Table";
     // WAIT TIMEOUTS
     public static final int DEFAULT_TIMEOUT_SECONDS_MEDIUM = 10;
     public static final int DEFAULT_TIMEOUT_SECONDS_SHORT = 5;
@@ -73,4 +80,35 @@ public class Constants {
     // ##################################
     // waitForText
     public static final String EXPECTED_PROGRESS_TEXT = "100%";
+    // iFrameTest
+    public static final String TEXT_TO_SEND = "Here Goes";
+    // TECHLISTIC_TABLE
+    public static final String TABLE1_ROW = "Austria";
+    public static final String TABLE1_COLUMN_HEADER = "Country";
+    public static final String TABLE2_ROW = "Taipei 101";
+    public static final String TABLE2_COLUMN_HEADER = "Built";
+    public static final String EXPECTED_TABLE1_COUNTRY = "Austria";
+    public static final String TABLE1_NAME_MISMATCH_MESSAGE = "Expected to find '" + EXPECTED_TABLE1_COUNTRY + "' in the table, but the content didn't match.";
+    public static final String EXPECTED_TABLE2_YEAR = "2004";
+    public static final String TABLE2_YEAR_MISMATCH_MESSAGE = "Expected to find '" + EXPECTED_TABLE2_YEAR + "' in the table, but the content didn't match.";
+    // TECH_CANVAS_TABLE
+    public static final String TABLE3_ROW = "Honda";
+    public static final String TABLE3_COLUMN_HEADER = "Make";
+    public static final String EXPECTED_TABLE_MAKE = "Jazz";
+    public static final String TABLE_MAKE_MISMATCH_MESSAGE = "Expected to find '" + EXPECTED_TABLE_MAKE + "' in the table, but the content didn't match.";
+    // HARD DOM TABLE
+    public static final String TABLE4_ROW = "Iuvaret1";
+    public static final String TABLE4_COLUMN_HEADER = "Amet";
+    public static final String EXPECTED_TABLE_CONSEQUUNTUR = "Consequuntur1";
+    public static final String TABLE_CONSEQUUNTUR_MISMATCH_MESSAGE = "Expected to find '" + EXPECTED_TABLE_CONSEQUUNTUR + "' in the table, but the content didn't match.";
+    // DEPRESSION TABLE
+    public static final String TABLE5_ROW = "18–25";
+    public static final String TABLE5_COLUMN_HEADER = "2020";
+    public static final String EXPECTED_TABLE_PERC = "17.2%";
+    public static final String TABLE_PERC_MISMATCH_MESSAGE = "Expected to find '" + EXPECTED_TABLE_PERC + "' in the table, but the content didn't match.";
+    // WIKIPEDIA
+    public static final String TABLE6_ROW = "Table header cell";
+    public static final String TABLE6_COLUMN_HEADER = "Usage notes";
+    public static final String EXPECTED_TABLE_NOTE = "Consecutive table header cells may be added on the same line separated by double marks (!!); or start on new lines, each with its own single mark (!).";
+    public static final String TABLE_NOTE_MISMATCH_MESSAGE = "Expected to find '" + EXPECTED_TABLE_NOTE + "' in the table, but the content didn't match.";
 }
