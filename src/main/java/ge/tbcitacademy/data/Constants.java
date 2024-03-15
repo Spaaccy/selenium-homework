@@ -6,6 +6,14 @@ public class Constants {
     // ##################################
     // TEST URL's
     public static final String DYNAMIC_CONTROLS_URL = "http://the-internet.herokuapp.com/dynamic_controls";
+    public static final String DYNAMIC_LOADING_URL = "https://the-internet.herokuapp.com/dynamic_loading";
+    public static final String JOBS_GE_URL = "https://jobs.ge";
+    public static final String SELENIUM_CLICK_IN_IFRAME_URL = "https://www.selenium.dev/selenium/web/click_tests/click_in_iframe.html";
+    public static final String SELENIUM_DYNAMIC_URL = "https://www.selenium.dev/selenium/web/dynamic.html";
+    public static final String SMASHING_MAGAZINE_LONG_SCROLLING_URL = "https://www.smashingmagazine.com/2017/05/long-scrolling/";
+    public static final String DEMOQA_BROWSER_WINDOWS_URL = "https://demoqa.com/browser-windows";
+    public static final String BATUMI_GOV_URL = "https://batumi.gov.ge";
+    public static final String GOOGLE_URL = "https://www.google.com/";
     public static final String AUTOMATION_URL = "https://ultimateqa.com/automation";
     public static final String DRAG_AND_DROP_URL = "http://the-internet.herokuapp.com/drag_and_drop";
     public static final String JQUERY_UI_SLIDER_URL = "https://jqueryui.com/slider/";
@@ -21,10 +29,13 @@ public class Constants {
     public static final String HARD_DOM_TABLE_URL = "http://the-internet.herokuapp.com/challenging_dom#delete";
     public static final String DEPRESSION_IS_REAL_TABLE_URL = "https://www.healthline.com/health/depression/facts-statistics-infographic#how-common-is-it";
     public static final String WIKIPEDIA_TABLE_URL = "https://en.wikipedia.org/wiki/Help:Table";
+    public static final String TODO_LIST_URL = "http://webdriveruniversity.com/To-Do-List/index.html";
+    public static final String SCROLLING_PRACTICE_URL = "http://webdriveruniversity.com/Scrolling/index.html";
     // WAIT TIMEOUTS
     public static final int DEFAULT_TIMEOUT_SECONDS_MEDIUM = 10;
     public static final int DEFAULT_TIMEOUT_SECONDS_SHORT = 5;
     public static final int DEFAULT_TIMEOUT_SECONDS_LONG = 15;
+    public static final int DEFAULT_TIMEOUT_MILISEC_MEDIUM = 500;
     // ##################################
     // unorderedListTest
     public static final String FILTER_KEYWORD = "o";
@@ -111,4 +122,18 @@ public class Constants {
     public static final String TABLE6_COLUMN_HEADER = "Usage notes";
     public static final String EXPECTED_TABLE_NOTE = "Consecutive table header cells may be added on the same line separated by double marks (!!); or start on new lines, each with its own single mark (!).";
     public static final String TABLE_NOTE_MISMATCH_MESSAGE = "Expected to find '" + EXPECTED_TABLE_NOTE + "' in the table, but the content didn't match.";
+    // JSexecutor
+    public static final String ELEMENT_UNEXPECTEDLY_FOUND_MSG = "Element should not be found in DOM!";
+    public static final String ELEMENT_DELETED_SUCCESS_MSG = "Element was deleted as expected.\n";
+    public static final int EXPECTED_CODE_PAIR_COUNT = 8;
+    public static final String SCROLL_TO_ELEMENT = "arguments[0].scrollIntoView();";
+    public static final String CLICK_THE_ELEMENT = "arguments[0].click();";
+    public static final String GET_ELEMENT_INNER_TEXT = "return arguments[0].innerText";
+    public static final String SCROLL_TO_ELEMENT_CUSTOM = "window.scrollTo(0, document.body.scrollHeight)";
+    public static final String EXPECTED_ENTRIES_TEXT = "0 Entries";
+    // Exceptions
+    public static final int X_OFFSET = 0;
+    public static final int Y_OFFSET = 1000;
+    public static final int FRAME_INDEX_1 = 1;
+    public static final String WINDOW_HANDLE_2 = "windowNumber2";
 }

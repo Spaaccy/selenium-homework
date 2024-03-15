@@ -14,7 +14,6 @@ import org.testng.annotations.Test;
 import util.HelperFunctions;
 import java.io.File;
 import java.time.Duration;
-import java.util.List;
 import static ge.tbcitacademy.data.Constants.*;
 
 @SuppressWarnings("SpellCheckingInspection")
