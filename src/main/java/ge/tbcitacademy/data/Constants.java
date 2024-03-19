@@ -148,5 +148,10 @@ public class Constants {
     public static final String[] COOKIE_NAMES = {"sessionID", "theme", "lang", "country", "planet", "galaxy", "moon", "sun", "os", "notebook"};
     public static final String[] COOKIE_VALUES = {UUID.randomUUID().toString(), "dark", "en-US", "geo", "earth", "andromeda", "on", "off", "macOS", "true"};
     public static final String SEARCH_TERM_COUNTRY = "uk";
+    // CROSS BROWSER
+    public static final String INVALID_BROWSER_MESSAGE = "Browser is not correct";
+    public static final String BROWSER_CHROME = "chrome";
+    public static final String BROWSER_EDGE = "edge";
+    public static final String BROWSER_FIREFOX = "firefox";
 
 }

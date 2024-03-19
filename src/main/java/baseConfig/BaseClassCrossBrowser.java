@@ -26,24 +26,24 @@ public class BaseClassCrossBrowser {
     @BeforeClass
     @Parameters("browser")
     public void setUp(String browser) {
-        if (browser.equalsIgnoreCase("chrome")){
+        if (browser.equalsIgnoreCase(BROWSER_CHROME)){
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addExtensions(new File("src/main/resources/adblock.crx"));
             driver = new ChromeDriver(options);
-        } else if (browser.equalsIgnoreCase("edge")){
+        } else if (browser.equalsIgnoreCase(BROWSER_EDGE)){
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
             options.addExtensions(new File("src/main/resources/adblock.crx"));
             driver = new EdgeDriver(options);
-        } else if (browser.equalsIgnoreCase("firefox")){
+        } else if (browser.equalsIgnoreCase(BROWSER_FIREFOX)){
               WebDriverManager.firefoxdriver().setup();
               FirefoxProfile profile = new FirefoxProfile(new File("src/main/resources/firefox"));
               FirefoxOptions options = new FirefoxOptions();
               options.setProfile(profile);
               driver = new FirefoxDriver(options);
         } else {
-            throw new IllegalArgumentException("Browser is not correct");
+            throw new IllegalArgumentException(INVALID_BROWSER_MESSAGE);
         }
         waitLong = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT_SECONDS_LONG));
         superShortWaitMed = new WebDriverWait(driver, Duration.ofMillis(DEFAULT_TIMEOUT_MILISEC_MEDIUM));
