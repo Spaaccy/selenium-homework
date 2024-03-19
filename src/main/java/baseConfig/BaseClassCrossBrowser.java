@@ -45,6 +45,7 @@ public class BaseClassCrossBrowser {
         } else {
             throw new IllegalArgumentException(INVALID_BROWSER_MESSAGE);
         }
+        driver.manage().window().maximize();
         waitLong = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT_SECONDS_LONG));
         superShortWaitMed = new WebDriverWait(driver, Duration.ofMillis(DEFAULT_TIMEOUT_MILISEC_MEDIUM));
         action = new Actions(driver);
