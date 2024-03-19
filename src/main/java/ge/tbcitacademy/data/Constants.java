@@ -1,4 +1,5 @@
 package ge.tbcitacademy.data;
+import java.util.UUID;
 
 public class Constants {
     // EXCEPTIONS MESSAGES
@@ -31,6 +32,7 @@ public class Constants {
     public static final String WIKIPEDIA_TABLE_URL = "https://en.wikipedia.org/wiki/Help:Table";
     public static final String TODO_LIST_URL = "http://webdriveruniversity.com/To-Do-List/index.html";
     public static final String SCROLLING_PRACTICE_URL = "http://webdriveruniversity.com/Scrolling/index.html";
+    public static final String AUTOCOMPLETE_DEMO_URL = "https://demo.automationtesting.in/AutoComplete.html";
     // WAIT TIMEOUTS
     public static final int DEFAULT_TIMEOUT_SECONDS_MEDIUM = 10;
     public static final int DEFAULT_TIMEOUT_SECONDS_SHORT = 5;
@@ -81,8 +83,6 @@ public class Constants {
     public static final String CITY = "Tbilisi";
     public static final String CONTACT_1 = "579020004";
     public static final String CONTACT_2 = "588887143";
-
-
     // waitForDisappearance
     public static final String EXPECTED_BUTTON_TEXT = "Disable";
     public static final String BUTTON_MISMATCH_MESSAGE = "Button value isn't 'Disabled'";
@@ -131,9 +131,22 @@ public class Constants {
     public static final String GET_ELEMENT_INNER_TEXT = "return arguments[0].innerText";
     public static final String SCROLL_TO_ELEMENT_CUSTOM = "window.scrollTo(0, document.body.scrollHeight)";
     public static final String EXPECTED_ENTRIES_TEXT = "0 Entries";
+    public static final String CODE_EXAMPLE_XPATH = "(.//pre[div[contains(.,'html')]] | //div[@trbidi='on']//pre/span/ancestor::div[1])";
     // Exceptions
     public static final int X_OFFSET = 0;
     public static final int Y_OFFSET = 1000;
     public static final int FRAME_INDEX_1 = 1;
     public static final String WINDOW_HANDLE_2 = "windowNumber2";
+    // COOKIES
+    public static final String DOCUMENT_READY_STATE_COMPLETE = "return document.readyState == 'complete'";
+    public static final String COOKIE_NAME_FILTER = "active_template";
+    public static final String COOKIE_VALUE_SEARCH = "pub_site";
+    public static final String COOKIE_MISMATCH_MESSAGE = "No cookie with " + COOKIE_VALUE_SEARCH + " in the value was found.";
+    public static final String SEARCH_INVALID_STATUS_MESSAGE = "No search results.";
+    public static final String COOKIE_SIZE_MISMATCH_MESSAGE = "The number of cookies did not change as expected.";
+    public static final String SEARCH_ARGUMENT_ERROR_MESSAGE = "Please search for a correct country.";
+    public static final String[] COOKIE_NAMES = {"sessionID", "theme", "lang", "country", "planet", "galaxy", "moon", "sun", "os", "notebook"};
+    public static final String[] COOKIE_VALUES = {UUID.randomUUID().toString(), "dark", "en-US", "geo", "earth", "andromeda", "on", "off", "macOS", "true"};
+    public static final String SEARCH_TERM_COUNTRY = "uk";
+
 }
