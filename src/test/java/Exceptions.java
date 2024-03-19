@@ -1,35 +1,31 @@
-import baseConfig.BaseClass;
+import baseConfig.BaseClassCrossBrowser;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import static ge.tbcitacademy.data.Constants.*;
 
-public class Exceptions extends BaseClass {
-    @Test
-    public void exceptionsTest() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT_SECONDS_LONG));
-
-        // NoSuchElementException
+public class Exceptions extends BaseClassCrossBrowser {
+    @Test(priority = 4)
+    public void NoSuchElementException() {
         driver.get(DYNAMIC_LOADING_URL);
-
         WebElement anchor2 = driver.findElement(By.xpath("//a[contains(text(), 'Example 2')]"));
         anchor2.click();
         WebElement button = driver.findElement(By.xpath("//div[@id='start']/button"));
         button.click();
 
         try {
-//            wait.until(ExpectedConditions.presenceOfElementLocated(By.id("finish")));
+//            waitLong.until(ExpectedConditions.presenceOfElementLocated(By.id("finish")));
             WebElement text1 = driver.findElement(By.id("finish"));
             System.out.println(text1.getText());
         } catch (NoSuchElementException e){
             System.out.println(e.getClass().getName());
         }
-
+    }
+    @Test(priority = 5)
+    public void StaleElementReferenceException() {
         // StaleElementReferenceException
         driver.get(JOBS_GE_URL);
         WebElement postButton = driver.findElement(By.xpath("//a[text()='გამოაქვეყნე']"));
@@ -44,7 +40,9 @@ public class Exceptions extends BaseClass {
         } catch (StaleElementReferenceException e) {
             System.out.println(e.getClass().getName());
         }
-
+    }
+    @Test(priority = 6)
+    public void NoSuchFrameException() {
         // NoSuchFrameException
         driver.get(SELENIUM_CLICK_IN_IFRAME_URL);
         WebElement iframe = driver.findElement(By.id("ifr"));
@@ -57,20 +55,24 @@ public class Exceptions extends BaseClass {
             System.out.println(e.getClass().getName());
         }
 //        driver.switchTo().defaultContent();
-
+    }
+    @Test(priority = 7)
+    public void TimeoutException() {
         // TimeoutException
         driver.get(SELENIUM_DYNAMIC_URL);
-//        WebDriverWait superShortWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        WebDriverWait superShortWait = new WebDriverWait(driver, Duration.ofMillis(DEFAULT_TIMEOUT_MILISEC_MEDIUM));
         WebElement adderButton = driver.findElement(By.id("adder"));
         adderButton.click();
 
         try {
-            WebElement redBox = superShortWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='redbox']")));
+            WebElement redBox = superShortWaitMed.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='redbox']")));
+//            WebElement redBox = waitLong.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='redbox']")));
+
         } catch (TimeoutException e) {
             System.out.println(e.getClass().getName());
         }
-
+    }
+    @Test(priority = 8)
+    public void MoveTargetOutOfBoundsException() {
         // MoveTargetOutOfBoundsException
         driver.get(SMASHING_MAGAZINE_LONG_SCROLLING_URL);
         WebElement a = driver.findElement(By.xpath("//a[text()='Delivery times']"));
@@ -80,7 +82,9 @@ public class Exceptions extends BaseClass {
         } catch (MoveTargetOutOfBoundsException e) {
             System.out.println(e.getClass().getName());
         }
-
+    }
+    @Test(priority = 9)
+    public void NoSuchWindowException() {
         // NoSuchWindowException
         driver.get(DEMOQA_BROWSER_WINDOWS_URL);
         WebElement newWindowButton = driver.findElement(By.xpath("//button[text()='New Window']"));
@@ -96,8 +100,10 @@ public class Exceptions extends BaseClass {
             System.out.println(e.getClass().getName());
         }
 //        driver.switchTo().window(originalWindow);
-
-        // NoAlertPresentException
+    }
+    @Test(priority = 10)
+    public void InvalidSelectorException() {
+        // InvalidSelectorException
         driver.get(BATUMI_GOV_URL);
 
         try {
@@ -106,7 +112,9 @@ public class Exceptions extends BaseClass {
         } catch (InvalidSelectorException e) {
             System.out.println(e.getClass().getName());
         }
-
+    }
+    @Test(priority = 11)
+    public void NoSuchSessionException() {
         // NoSuchSessionException
         driver.get(GOOGLE_URL);
         WebElement aboutButton = driver.findElement(By.xpath("//a[text()='About']"));
