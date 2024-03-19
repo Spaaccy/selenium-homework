@@ -26,6 +26,7 @@ public class CookiesTest extends BaseClass {
 
         Assert.assertTrue(cookieContains, COOKIE_MISMATCH_MESSAGE);
         System.out.println("I AM HOTFIX");
+        System.out.println("I AM A MAIN FIX");
     }
 
     @Test(priority = 2)
