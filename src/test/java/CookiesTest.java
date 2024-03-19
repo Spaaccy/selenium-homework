@@ -25,6 +25,7 @@ public class CookiesTest extends BaseClass {
                 .anyMatch(cookie -> cookie.getValue().contains(COOKIE_VALUE_SEARCH));
 
         Assert.assertTrue(cookieContains, COOKIE_MISMATCH_MESSAGE);
+        System.out.println("I AM HOTFIX");
     }
 
     @Test(priority = 2)
